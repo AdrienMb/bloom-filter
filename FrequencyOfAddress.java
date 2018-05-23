@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class FrequencyOfAddress {
 
-	public static ArrayList<IP> findFrequencies(ArrayList<String> ips){
-		ArrayList<IP> result = new ArrayList<IP>();
+	public static List<IP> findFrequencies(List<String> ips){
+		List<IP> result = new ArrayList<IP>();
 		String ip;
 		boolean notFound=true;
 		for(int i=0;i<ips.size();i++){

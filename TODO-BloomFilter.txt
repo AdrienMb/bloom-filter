@@ -1,0 +1,8 @@
+TODO Bloom filter :
+
+- Tester avec d'autres fonctions de hashage
+- Faire une sorte de menu dans le main pour choisir sa méthode
+- Afficher les résultats + ajouter un champ recherche
+- Afficher le temps d'exe
+- Faire une doc avec différents cas test, comparer le temps d'exe...
+- Justifier par le calcul les paramètres du filtre choisi (cf formules wiki, https://hur.st/bloomfilter/)
