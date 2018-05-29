@@ -7,7 +7,11 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class FrequencyOfAddressHashMap {
-
+	/**
+	 * 
+	 * @param path : chemin d'accès du fichier de données
+	 * @return une hasmap avec comme clef une adresse ip et comme valeurs son nombre d'occurence
+	 */
 	public static Map<String,Integer> findFrequencies(String path){
 		Map<String,Integer> result = new HashMap<String,Integer>();
 		String ip;

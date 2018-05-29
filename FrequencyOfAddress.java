@@ -2,7 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FrequencyOfAddress {
-
+	/**
+	 * 
+	 * @param ips : liste d'adresse ip
+	 * @return une liste d'objet IP avec l'adresse et la fréquence associée
+	 */
 	public static List<IP> findFrequencies(List<String> ips){
 		List<IP> result = new ArrayList<IP>();
 		String ip;

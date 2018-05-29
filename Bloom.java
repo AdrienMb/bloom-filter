@@ -101,13 +101,17 @@ public class Bloom {
 
 	/**
 	 * 
-	 * @param ips : List des ips à ajouter pour initialiser le filtre.
+	 * @param ips : Liste des ips à ajouter pour initialiser le filtre.
 	 */
 	public void initBloom(List<String> ips) {
 		for(String ip : ips) {
 			addIp(ip);
 		}
 	}
+	/**
+	 * 
+	 * @param path : chemin d'accès du fichier de données
+	 */
 	public void initBloomWithFile(String path) {
 				try(Scanner scan = new Scanner(FileSystems.getDefault().getPath(path))){
 					String line = scan.nextLine();

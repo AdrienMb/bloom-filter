@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class OpenFile {
+	/**
+	 * 
+	 * @param path : chemin d'accès du fichier de données
+	 * @return la liste des ips du fichier
+	 */
 	public static List<String> openFile(String path){
 		List<String> ips = new ArrayList<String>();
 		try(Scanner scan = new Scanner(FileSystems.getDefault().getPath(path))){
