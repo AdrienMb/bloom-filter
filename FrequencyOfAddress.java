@@ -1,23 +1,28 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class FrequencyOfAddress {
 
-	public static Map<String,Integer> findFrequencies(List<String> ips){
-		Map<String,Integer> result = new HashMap<String,Integer>();
+	public static List<IP> findFrequencies(List<String> ips){
+		List<IP> result = new ArrayList<IP>();
 		String ip;
 		boolean notFound=true;
 		for(int i=0;i<ips.size();i++){
 			ip = ips.get(i);
-			if (result.containsKey(ip)) {
-				int count = result.get(ip);
-				count++;
-				result.put(ip,count);
-			} else {
-				result.put(ip,1);
+			for(int j=0;j<result.size();j++){
+				if(ip.equals(result.get(j).getAddress())){
+					IP newFrequency=result.get(j);
+					newFrequency.setFrequency(newFrequency.getFrequency()+1);
+					result.set(j, newFrequency);
+					notFound=false;
+					break;
+				}
 			}
+			if(notFound){
+				IP newIp=new IP(ip);
+				result.add(newIp);
+			}
+			notFound=true;
 		}
 		return result;
 	}

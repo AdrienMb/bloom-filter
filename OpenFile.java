@@ -11,7 +11,7 @@ public class OpenFile {
 			String line = scan.nextLine();
 			while(scan.hasNextLine()) {
 				line = scan.nextLine();
-				ips.add(line.split(";")[0]);
+				ips.add(line.split(",")[0]);
 			}	
 		} catch (IOException e) {
 			e.printStackTrace();

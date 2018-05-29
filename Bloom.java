@@ -1,6 +1,9 @@
+import java.io.IOException;
+import java.nio.file.FileSystems;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class Bloom {
 	/**
@@ -105,4 +108,16 @@ public class Bloom {
 			addIp(ip);
 		}
 	}
-}
+	public void initBloomWithFile(String path) {
+				try(Scanner scan = new Scanner(FileSystems.getDefault().getPath(path))){
+					String line = scan.nextLine();
+					while(scan.hasNextLine()) {
+						line = scan.nextLine();
+						addIp(line.split(",")[0]);
+					}	
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+	}
+
