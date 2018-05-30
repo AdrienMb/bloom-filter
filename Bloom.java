@@ -20,7 +20,7 @@ public class Bloom {
 	 * Notre de tableau d'entier 
 	 * (et non de bit puisqu'il s'agit d'un "Counting bloom filter")
 	 */
-	public short[] bloom;
+	public int[] bloom;
 
 	/**
 	 * @param m : Taille du tableau de notre filtre.
@@ -29,7 +29,7 @@ public class Bloom {
 	public Bloom(int m, int k) {
 		this.m=m;
 		this.k=k;
-		this.bloom= new short[m];
+		this.bloom= new int[m];
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class Bloom {
 	 */
 	public int countIp(String ip) {
 		int[] hashes = hashk(ip);
-		List<Short> count = new ArrayList<Short>();
+		List<Integer> count = new ArrayList<Integer>();
 		for(int i=0; i<k; i++){
 			int position = Math.abs(hashes[i]%m);
 			count.add(bloom[position]);

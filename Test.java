@@ -46,7 +46,7 @@ public class Test {
 			case 3://Avec le filtre de bloom
 				
 				System.out.println("Choisissez la taille du filtre (0 pour défaut)");
-				int tailleBloomChoisi = scanner.nextInt(), tailleBloom=330684515, nbHash=10;
+				int tailleBloomChoisi = scanner.nextInt(), tailleBloom=2622794, nbHash=23;
 				if(tailleBloomChoisi!=0)
 					tailleBloom=tailleBloomChoisi;
 				System.out.println("Choisissez le nombre de fonction de hashage (0 pour défaut)");
